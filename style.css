@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'idroid';
+    src: url(fontes/idroid.otf);
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: 'Bebas Neue', sans-serif;
+    --fonte2: 'idroid', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(var(--cor2), var(--cor3), var(--cor4), var(--cor5));
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    width: 100%;
+    height: auto;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.315);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+}
+
+.titulo > h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.titulo > h2 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.menu {
+    margin: auto 10px 1px 10px;
+}
+
+.menu li {
+    list-style: none;
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-shadow: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+    padding: 7px 12px;
+    border-radius: 8px;
+    transition: background-color 1s ease;
+    margin-right: 3px;
+}
+
+.menu a:hover {
+    background-color: var(--cor2);
+    color: var(--cor4);
+}
+
+body {
+    background-color: #E8E6C3;
+}
+
+main {
+    width: 100%;
+    max-width: 750px;
+    background-color: white;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 7px #8f8d678f;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 15px;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bolder;
+}
+
+main > h1 {
+    font-family: var(--fonte2);
+    color: var(--cor5);
+    padding-top: 15px;
+}
+
+main > p {
+    font-family: var(--fonte0);
+    text-indent: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: justify;
+}
+
+main > h2 {
+    font-family: var(--fonte2);
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), var(--cor0), white);
+    font-weight: normal;
+    padding: 0 auto 0 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    padding-left: 8px;
+}
+
+.link-interno {
+    text-decoration: none;
+    color: var(--cor4);
+    font-weight: bolder;
+}
+
+.link-interno:hover {
+    text-decoration: underline;
+}
+
+.link-externo {
+    text-decoration: none;
+    color: var(--cor4);
+    font-weight: bolder;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor0));
+    padding: 2px 3px 2px 5px;
+    border-radius: 5px;
+}
+
+.link-externo:hover {
+    color: white;
+    background-image: linear-gradient(to right, var(--cor4), var(--cor3));
+}
+
+.link-externo::after {
+    content: "🔗";
+    font-size: 12px;
+    vertical-align: text-top;
+}
+
+.picture {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.video {
+    background-color: var(--cor5);
+    position: relative;
+    padding: 30px;
+    margin: 30px -20px 20px -20px;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding-bottom: 10px;
+    font-family: var(--fonte0);
+    border-radius: 20px 20px 10px 10px;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    padding: 10px 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+aside > p {
+    padding-left: 5px;
+    text-indent: 30px;
+    margin: 10px auto;
+}
+
+aside > ul {
+    list-style-image: url(imagens/verifica.png);
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+aside div {
+    display: inline-block;
+    width: 300px;
+}
+
+aside .link-externo {
+    background-image: none;
+    padding: initial;
+}
+
+aside .link-externo:hover {
+    background-image: none;
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--cor5);
+    color: white;
+    font-family: var(--fonte0);
+    padding: 10px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+footer > strong {
+    font-weight: bolder;
+}
